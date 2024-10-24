@@ -1,10 +1,9 @@
 import "./App.css";
 import Presentacion from "./components/pages/Presentacion";
-import NavbarUI from "./components/molecules/NavbarUI";
 import { PageInfo } from "./components/pages/PageInfo";
 import Footer from "./components/organisms/Footer";
-import PageVideo2 from "./components/pages/PageVideo2";
 import useIntersection from "./components/hooks/useIntersection";
+import Dudes from "./components/organisms/Dudes";
 
 function App() {
   const options = { threshold: 1, rootMargin: "0px 0px 0px 0px" };
@@ -29,10 +28,13 @@ function App() {
         <div className={`pageinfo`}>
           <PageInfo />
         </div>
-
-        <div className="presentacion-2">
-          <PageVideo2 src="videobg-2.mp4" isEstatico={false}></PageVideo2>
+        <div className="pagedudes">
+          <Dudes></Dudes>
         </div>
+
+        {/* <div className="presentacion-2">
+          <PageVideo2 src="videobg-2.mp4" isEstatico={false}></PageVideo2>
+        </div> */}
 
         {/* <Presentacion src="videobg-5.mp4" isEstatico={true}></Presentacion> */}
         <Footer />

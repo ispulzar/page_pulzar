@@ -1,37 +1,26 @@
 import React from "react";
+import ContactUs from "./ContactUs";
 
 type Props = {};
 
 function Footer({}: Props) {
   return (
-    <div className="footer ">
-      <div className="contenedor">
-        <div className="row">
-          <div className="col">
-            <h3>Compañía</h3>
-            <ul>
-              <li>
-                <a href="/">Acerca de nosotros</a>
-              </li>
-              <li>
-                <a href="/">Contacto</a>
-              </li>
-            </ul>
+    <div className="footer">
+      <div>
+        <ContactUs />
+      </div>
+      <div className="contenedor-footer">
+        <h3>Pulzar</h3>
+        <div>
+          <div>
+            <a href="/">Acerca de nosotros</a>
           </div>
-          <div className="col">
-            <h3>Enlaces rápidos</h3>
-            <ul>
-              <li>
-                <a href="/">Productos</a>
-              </li>
-              <li>
-                <a href="/">Servicios</a>
-              </li>
-            </ul>
+          <div>
+            <a href="/">Servicios</a>
           </div>
         </div>
         <div className="copyright">
-          &copy; {new Date().getFullYear()} Tu Compañía. Todos los derechos
+          &copy; {new Date().getFullYear()} Pulzar. Todos los derechos
           reservados.
         </div>
       </div>
