@@ -1,4 +1,3 @@
-import "./App.css";
 import Presentacion from "./components/pages/Presentacion";
 import { PageInfo } from "./components/pages/PageInfo";
 import Footer from "./components/organisms/Footer";
@@ -12,9 +11,6 @@ function App() {
 
   return (
     <div id="app">
-      {/* <div className="fixed top-0 left-0 z-10 w-full">
-        <NavbarUI brand={"Pulzar"} menuItems={["Contacto", "Nosotros"]} />
-      </div> */}
       <div className="presentacion">
         <Presentacion src="videobg-3.mp4" />
         <div ref={Observador1Ref} className="observador"></div>
@@ -31,12 +27,6 @@ function App() {
         <div className="pagedudes">
           <Dudes></Dudes>
         </div>
-
-        {/* <div className="presentacion-2">
-          <PageVideo2 src="videobg-2.mp4" isEstatico={false}></PageVideo2>
-        </div> */}
-
-        {/* <Presentacion src="videobg-5.mp4" isEstatico={true}></Presentacion> */}
         <Footer />
       </div>
     </div>

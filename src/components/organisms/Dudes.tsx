@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
-type Props = {};
 
-function Dudes({}: Props) {
+function Dudes() {
   const [show1, setShow1] = useState(true);
   const [show2, setShow2] = useState(true);
   const [show3, setShow3] = useState(true);

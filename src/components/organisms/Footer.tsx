@@ -1,9 +1,7 @@
-import React from "react";
 import ContactUs from "./ContactUs";
 
-type Props = {};
 
-function Footer({}: Props) {
+function Footer() {
   return (
     <div className="footer">
       <div>

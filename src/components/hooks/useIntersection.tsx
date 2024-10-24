@@ -1,14 +1,16 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, RefObject } from "react";
 
 interface IntersectionOptions {
   threshold: number;
   root?: Element | null;
   rootMargin?: string;
 }
+
 function useIntersection(
   options: IntersectionOptions
-): [boolean, Ref<Element>] {
-  const myRef = useRef();
+): [boolean, RefObject<HTMLDivElement>] {
+  // Cambiar Element a HTMLDivElement
+  const myRef = useRef<HTMLDivElement | null>(null); // Especificar el tipo correcto
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -23,12 +25,14 @@ function useIntersection(
     if (elemento) {
       observer.observe(elemento);
     }
+
     return () => {
       if (elemento) {
         observer.unobserve(elemento);
       }
     };
   }, [options]);
+
   return [isVisible, myRef];
 }
 
